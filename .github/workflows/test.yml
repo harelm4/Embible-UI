@@ -2,7 +2,7 @@ name: my workflow
 on:
   push:
     branches:
-      -"master"
+      - master
 
 jobs:
   build:
@@ -14,11 +14,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: install and build
-      working-directory: ./
-      run: npm install && npm run build
-    - name: Deploy 
-      uses: JamesIves/github-pages-deploy-actions@4.1.1
-      with:
-        branch: dev-env
-        foldor: dist
+      run: npm install && ng build
+
 
