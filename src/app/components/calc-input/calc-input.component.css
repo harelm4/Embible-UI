@@ -11,7 +11,7 @@
   justify-content: end;
   margin-right: 3rem;
   margin-top: 1rem;
-  color: white;
+
 }
 
 #input-container{
@@ -65,4 +65,7 @@ textarea{
   transform: scale(0.6);
   color: gray;
   font-weight: 100;
+}
+#file-input{
+  display: none;
 }

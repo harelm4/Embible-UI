@@ -3,6 +3,8 @@
   box-shadow:0px 0px 5px rgb(0, 0, 0,0.1) !important;
 }
 #container{
-  background-image: url("../assets/wallpaper.jpg");
+  /* background-image: url("../assets/wallpaper.jpg"); */
+  background-color:rgb(221, 233, 233);
   object-fit: stretch;
+  height: 100%;
 }

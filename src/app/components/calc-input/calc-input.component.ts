@@ -22,7 +22,9 @@ export class CalcInputComponent implements OnInit {
     this.router.navigate(['']);
   }
   calc() {
-    this.apiService.mock().subscribe({
+    this.textPreds = [{ text: '...אנא המתן', predictions: undefined }];
+
+    this.apiService.calc(this.inputText).subscribe({
       next: (res: ITextPrediction[]) => {
         this.textPreds = res;
       },
