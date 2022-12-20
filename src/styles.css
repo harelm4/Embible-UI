@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('bootstrap-icons/font/bootstrap-icons.css');
+:root {
+  --yellow: #f6c121;
+  --faded-green: #ADE792;
+  --green:#6ECCAF;
+  --blue:#6495ED;
+  --dark-green:#3D5656;
+  --dark-blue:#344D67;
+  --sand:#F3ECB0;
+  --teal:#00ABB3;
+  --space:#EAEAEA;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

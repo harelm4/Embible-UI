@@ -1,0 +1,9 @@
+<div id="bar">
+  <button mat-button *ngFor="let item of menuItems">
+
+    <span>{{item.name}}</span>
+    <i [class]="item.icon"></i>
+  </button>
+  <app-logo></app-logo>
+</div>
+

@@ -1,0 +1,15 @@
+<div id="container" >
+  <mat-card id="content" >
+  <span *ngFor="let textPred of textPreds"  >
+    <span *ngIf="textPreds" [@fadeIn]="{value: ':enter',params:{time:'500ms'}}">
+    <span *ngIf="!textPred.predictions;else pred">{{textPred.text}}</span>
+    <ng-template #pred>
+      <span [matTooltip]="getPredictionsString(textPred.predictions!)"
+        id="pred">{{textPred.predictions![0].value}}</span>
+    </ng-template>
+  </span>
+  </span>
+
+  </mat-card>
+</div>
+
