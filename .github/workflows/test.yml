@@ -1,0 +1,24 @@
+name: my workflow
+on:
+  push:
+    branches:
+      -"master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        node-version: [16.14]
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: install and build
+      working-directory: ./
+      run: npm install && npm run build
+    - name: Deploy 
+      uses: JamesIves/github-pages-deploy-actions@4.1.1
+      with:
+        branch: dev-env
+        foldor: dist
+
