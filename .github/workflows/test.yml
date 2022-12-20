@@ -16,9 +16,5 @@ jobs:
     - name: install and build
       working-directory: ./
       run: npm install && npm run build
-    - name: Deploy 
-      uses: JamesIves/github-pages-deploy-actions@4.1.1
-      with:
-        branch: dev-env
-        foldor: dist
+
 
