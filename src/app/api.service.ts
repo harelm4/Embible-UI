@@ -7,7 +7,7 @@ import { ITextPrediction } from 'src/interfaces/icalc-result';
   providedIn: 'root',
 })
 export class ApiService {
-  url = 'http://127.0.0.1:8000';
+  url = 'http://132.73.84.173:8000';
   constructor(private client: HttpClient) {}
 
   calc(text: string): Observable<ITextPrediction[]> {
