@@ -9,25 +9,20 @@ on:
 
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy: 
-      matrix: 
-        node-version: [12.x]
+  build-and-deploy:
+    runs-on: self-hosted
 
     steps:
     
     - uses: actions/checkout@v3
-    
-    - name: node.js setup
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{matrix.node-version}}
-    
+        
     - name: Install dependencies
       run: npm install
 
 
     - name: build
-      run: npm run build
+      run: |
+        $env:NODE_OPTIONS="--openssl-legacy-provider" 
+        ng build
+        Copy-Item -Path C:\deploy\_work\Embible-UI\Embible-UI\dist\UI\* -Destination C:\Apache24\htdocs -recurse -Force
 
