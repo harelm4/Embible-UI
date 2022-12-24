@@ -24,4 +24,5 @@ jobs:
       run: |
         $env:NODE_OPTIONS="--openssl-legacy-provider" 
         ng build
+        Copy-Item -Path C:\deploy\_work\Embible-UI\Embible-UI\dist\UI -Destination C:\Apache24\htdocs -PassThru
 
