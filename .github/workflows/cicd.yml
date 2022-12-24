@@ -11,22 +11,13 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-    strategy: 
-      matrix: 
-        node-version: [12.x]
 
     steps:
-    
+
     - uses: actions/checkout@v3
-    
-    - name: node.js setup
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{matrix.node-version}}
     
     - name: Install dependencies
       run: npm install
-
 
     - name: build
       run: npm run build
