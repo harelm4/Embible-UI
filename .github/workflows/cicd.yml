@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: self-hosted
 
     steps:
@@ -25,5 +25,5 @@ jobs:
 
 
     - name: build
-      run: npm run build
+      run: ng build
 
