@@ -21,5 +21,7 @@ jobs:
 
 
     - name: build
-      run: $env:NODE_OPTIONS="--openssl-legacy-provider" &&  ng build
+      run: |
+        $env:NODE_OPTIONS="--openssl-legacy-provider" 
+        ng build
 
