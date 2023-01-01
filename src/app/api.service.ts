@@ -7,8 +7,8 @@ import { ITextPrediction } from 'src/interfaces/icalc-result';
   providedIn: 'root',
 })
 export class ApiService {
-  // url = 'https://embible.cs.bgu.ac.il';
-  url = 'http://localhost:443';
+  url = 'https://embible.cs.bgu.ac.il';
+  // url = 'http://localhost:443';
   constructor(private client: HttpClient) {}
 
   calc(text: string): Observable<ITextPrediction[]> {
