@@ -15,7 +15,7 @@ export class ApiService {
     const params: HttpParams = new HttpParams().set('text', text);
     return this.client.get<ITextPrediction[]>(`${this.url}/calc`, {
       params: params,
-      withCredentials: true,
+      // withCredentials: true,
     });
   }
 }
