@@ -24,5 +24,6 @@ jobs:
       run: |
         $env:NODE_OPTIONS="--openssl-legacy-provider" 
         ng build
-        Copy-Item -Path C:\deploy\_work\Embible-UI\Embible-UI\dist\UI\* -Destination C:\Apache24\htdocs -recurse -Force
+        Remove-item -Recurse C:\frontend\nginx-1.24.0\nginx-1.24.0\html\*
+        Copy-Item -Path C:\deploy\_work\Embible-UI\Embible-UI\dist\UI\* -Destination C:\frontend\nginx-1.24.0\nginx-1.24.0\html -Recurse -Force
 
