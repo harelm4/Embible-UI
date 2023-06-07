@@ -1,5 +1,5 @@
-$templatesPath="../../templates"
-$staticPath="../../static"
+$templatesPath="C:\Users\hmoshayo\OneDrive - Intel Corporation\Desktop\studies\final project\Embible\Embible-Backend\templates"
+$staticPath="C:\Users\hmoshayo\OneDrive - Intel Corporation\Desktop\studies\final project\Embible\Embible-Backend\static"
 $indexPath="dist/ui/index.html"
 $distAllPath="dist/ui/*"
 $assetsPath="src/assets"

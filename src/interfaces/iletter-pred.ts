@@ -1,6 +1,6 @@
 import { IPrediction } from './icalc-result';
 
-export interface ILetterPrediction {
+export interface ITextPart {
   value: string;
   predictions: IPrediction[] | undefined;
 }

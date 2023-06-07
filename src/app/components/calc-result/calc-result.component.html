@@ -1,11 +1,13 @@
 <div id="container" >
   <mat-card id="content" >
   <span *ngFor="let textPred of textPreds"  >
-    <span *ngIf="textPreds" [@fadeIn]="{value: ':enter',params:{time:'500ms'}}">
-    <span *ngIf="!textPred.predictions;else pred">{{textPred.text}}</span>
+    <span  *ngIf="textPreds" [@fadeIn]="{value: ':enter',params:{time:'500ms'}}">
+    <span class="fit-content" *ngIf="!textPred.predictions;else pred">{{' '}}{{textPred.text}}</span>
     <ng-template #pred>
-      <span [matTooltip]="getPredictionsString(textPred.predictions!)"
-        id="pred">{{textPred.predictions![0].value}}</span>
+      <span>{{' '}}</span>
+      <span  *ngIf="textPred.predictions!.length" [matTooltip]="getPredictionsString(textPred.predictions!)"
+        class="pred">{{textPred.predictions![0].value}}</span>
+      <span class="pred" *ngIf="!textPred.predictions!.length" matTooltip="המערכת לא הצליחה לחזות את החלק הזה">?</span>
     </ng-template>
   </span>
   </span>
